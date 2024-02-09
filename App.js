@@ -5,9 +5,13 @@ const App = () =>{
   return(
    <SafeAreaView style={styles.container}>
     <ScrollView>
-      <Text style={styles.title}>Mi biografía</Text>
-     <Image style={styles.image} source={require('./assets/images/mano.jpg')}/>
-     <TextComponent></TextComponent>
+     <Text style={styles.title}>Mi biografía</Text>
+     <View style={styles.container}>
+       <Image style={styles.image} source={require('./assets/images/mi.png')}/>
+     </View>
+     <View style={styles.Textcontainer}>
+       <TextComponent></TextComponent>
+     </View>
     </ScrollView>
     </SafeAreaView>
   )
@@ -17,19 +21,33 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "center",    
     width: "100%",
     height: "100%",
-    backgroundColor: '#487eb0'
+    backgroundColor: '#AFE4EF',
+    padding: 15
   },
   image: {
-    width: 100, 
-    height: 100
+    marginTop: 4,
+    width: 270, 
+    height: 300
   },
   title: {
-    fontSize: 14,
+    textAlign: "center",
+    fontSize: 36,
     fontWeight: "normal",
-    color:  "#dfe6e9"
+    color:  "#104955",
+    padding: 20
+  }, 
+  Textcontainer: {
+    alignItems: "center",
+    justifyContent: "center",    
+    width: "50",
+    height: "50",
+    backgroundColor: '#D4F0F6',
+    borderRadius: 25,
+    padding: 10
+    
   }
 })
 
